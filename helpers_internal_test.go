@@ -14,10 +14,10 @@ func TestGetGRPCEndpoint(t *testing.T) {
 	}{
 		{input: "/", output: "/"},
 		{input: "/resource", output: "/resource"},
-		{input: "/improbable.grpcweb.test.TestService/PingEmpty", output: "/improbable.grpcweb.test.TestService/PingEmpty"},
-		{input: "/improbable.grpcweb.test.TestService/PingEmpty/", output: "/improbable.grpcweb.test.TestService/PingEmpty"},
-		{input: "/a/b/c/improbable.grpcweb.test.TestService/PingEmpty", output: "/improbable.grpcweb.test.TestService/PingEmpty"},
-		{input: "/a/b/c/improbable.grpcweb.test.TestService/PingEmpty/", output: "/improbable.grpcweb.test.TestService/PingEmpty"},
+		{input: "/test.TestService/PingEmpty", output: "/test.TestService/PingEmpty"},
+		{input: "/test.TestService/PingEmpty/", output: "/test.TestService/PingEmpty"},
+		{input: "/a/b/c/test.TestService/PingEmpty", output: "/test.TestService/PingEmpty"},
+		{input: "/a/b/c/test.TestService/PingEmpty/", output: "/test.TestService/PingEmpty"},
 	}
 
 	for _, c := range cases {

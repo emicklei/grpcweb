@@ -20,13 +20,13 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	TestService_PingEmpty_FullMethodName    = "/improbable.grpcweb.test.TestService/PingEmpty"
-	TestService_Ping_FullMethodName         = "/improbable.grpcweb.test.TestService/Ping"
-	TestService_PingError_FullMethodName    = "/improbable.grpcweb.test.TestService/PingError"
-	TestService_PingList_FullMethodName     = "/improbable.grpcweb.test.TestService/PingList"
-	TestService_PingPongBidi_FullMethodName = "/improbable.grpcweb.test.TestService/PingPongBidi"
-	TestService_PingStream_FullMethodName   = "/improbable.grpcweb.test.TestService/PingStream"
-	TestService_Echo_FullMethodName         = "/improbable.grpcweb.test.TestService/Echo"
+	TestService_PingEmpty_FullMethodName    = "/test.TestService/PingEmpty"
+	TestService_Ping_FullMethodName         = "/test.TestService/Ping"
+	TestService_PingError_FullMethodName    = "/test.TestService/PingError"
+	TestService_PingList_FullMethodName     = "/test.TestService/PingList"
+	TestService_PingPongBidi_FullMethodName = "/test.TestService/PingPongBidi"
+	TestService_PingStream_FullMethodName   = "/test.TestService/PingStream"
+	TestService_Echo_FullMethodName         = "/test.TestService/Echo"
 )
 
 // TestServiceClient is the client API for TestService service.
@@ -299,7 +299,7 @@ func _TestService_Echo_Handler(srv interface{}, ctx context.Context, dec func(in
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var TestService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "improbable.grpcweb.test.TestService",
+	ServiceName: "test.TestService",
 	HandlerType: (*TestServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -341,8 +341,8 @@ var TestService_ServiceDesc = grpc.ServiceDesc{
 }
 
 const (
-	TestUtilService_ContinueStream_FullMethodName    = "/improbable.grpcweb.test.TestUtilService/ContinueStream"
-	TestUtilService_CheckStreamClosed_FullMethodName = "/improbable.grpcweb.test.TestUtilService/CheckStreamClosed"
+	TestUtilService_ContinueStream_FullMethodName    = "/test.TestUtilService/ContinueStream"
+	TestUtilService_CheckStreamClosed_FullMethodName = "/test.TestUtilService/CheckStreamClosed"
 )
 
 // TestUtilServiceClient is the client API for TestUtilService service.
@@ -464,7 +464,7 @@ func _TestUtilService_CheckStreamClosed_Handler(srv interface{}, ctx context.Con
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var TestUtilService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "improbable.grpcweb.test.TestUtilService",
+	ServiceName: "test.TestUtilService",
 	HandlerType: (*TestUtilServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -481,7 +481,7 @@ var TestUtilService_ServiceDesc = grpc.ServiceDesc{
 }
 
 const (
-	FailService_NonExistant_FullMethodName = "/improbable.grpcweb.test.FailService/NonExistant"
+	FailService_NonExistant_FullMethodName = "/test.FailService/NonExistant"
 )
 
 // FailServiceClient is the client API for FailService service.
@@ -570,7 +570,7 @@ func _FailService_NonExistant_Handler(srv interface{}, ctx context.Context, dec 
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var FailService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "improbable.grpcweb.test.FailService",
+	ServiceName: "test.FailService",
 	HandlerType: (*FailServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -26,7 +26,6 @@ import (
 	"github.com/emicklei/grpcweb"
 	"github.com/emicklei/grpcweb/test"
 	testproto "github.com/emicklei/grpcweb/test"
-	"github.com/golang/protobuf/proto"
 	google_protobuf "github.com/golang/protobuf/ptypes/empty"
 	"github.com/mwitkow/go-conntrack/connhelpers"
 	"github.com/stretchr/testify/assert"
@@ -39,6 +38,7 @@ import (
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/grpclog"
 	"google.golang.org/grpc/metadata"
+	"google.golang.org/protobuf/proto"
 )
 
 var (
@@ -106,7 +106,7 @@ func (s *GrpcWebWrapperTestSuite) SetupTest() {
 
 	s.listener, err = net.Listen("tcp", "127.0.0.1:0")
 	require.NoError(s.T(), err, "failed to set up server socket for test")
-	tlsConfig, err := connhelpers.TlsConfigForServerCerts("../../misc/localhost.crt", "../../misc/localhost.key")
+	tlsConfig, err := connhelpers.TlsConfigForServerCerts("./misc/localhost.crt", "./misc/localhost.key")
 	require.NoError(s.T(), err, "failed loading keys")
 	if s.httpMajorVersion == 2 {
 		tlsConfig, err = connhelpers.TlsConfigWithHttp2Enabled(tlsConfig)
